@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+        <div class="container">
+          <a class="navbar-brand" href="#">Admin</a>
+          <button><a href="/logout">Logout</a></button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    </nav>
+    <%try{%>
+    <p id="systemMessage">
+      <%=systemMessage %>
+    </p>
+    <%} catch (error) {}%>
+    <br><br><div class="list">
+        <% for (let i=0; i < users.length; i++){ %>
+            <div class="row">
+                <p class="attribute">Usuario:</p>
+                <p class="data">
+                    <%=users[i].name%>
+                </p> | <p class="attribute">Email:</p>
+                <p class="data">
+                    <%=users[i].email%>
+                </p>
+                <a href="/delete/<%=users[i].name%>"><button type="button" class="btn btn-danger">Delete</button></a>
+            </div>
+            <%}%>
+    </div>
+    <script>
+    setTimeout(() => {
+        document.getElementById('systemMessage').style.opacity = 0;
+      }, 3000);
+    </script>
+</body>
+</html>
