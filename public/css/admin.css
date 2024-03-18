@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: rgb(32, 32, 32);
+}
+
+.navbar-laravel {
+    box-shadow: 0 2px 5px rgba(0,0,0,.10);
+  }
+  
+.navbar-brand , .nav-link, .my-form, .login-form, main {
+    font-family: Raleway, sans-serif;
+}
+
+.list {
+    background-color: rgb(60, 60, 60);
+    width: 70%;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    border: 1px solid black;
+}
+
+p {
+    margin: 30px;
+}
+
+.attribute {
+    font-weight: bold;
+}
+
+.data {
+    margin-left: 0;
+    margin-right: 0;
+    color: rgb(194, 194, 194);
+}
+
+.deleteButton {
+    width: 40px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+button {
+    margin-right: 40px;
+}
+
+#systemMessage {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 3s all linear;
+    position: absolute;
+    top: 400px;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.61);
+    border: red;
+}
